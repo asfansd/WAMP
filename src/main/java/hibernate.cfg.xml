@@ -10,8 +10,8 @@
         <!-- Database connection settings -->
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="connection.url">jdbc:mysql://localhost:3306/wampdb</property>
-        <property name="connection.username">root</property>
-        <property name="connection.password">Sushjog@3007!!!</property>
+        <property name="connection.username">"MySQL Username"</property>
+        <property name="connection.password">"MySQL Password"</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
