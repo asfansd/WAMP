@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.hibernate.userguide.mapping.converter.hbm">
+    <class name="com.me.wamp.pojo.Playlist" table="playlist">
+        <id name="playlistid" column="playlistid" type="integer">
+            <generator class="native" />
+        </id>
+        <list name="medialist" table="link_playlist_media">
+        	<key column = "playlist_id"/>
+        	<list-index column = "INDEX"/>
+        	<many-to-many class="com.me.wamp.pojo.Media" column = "media" foreign-key="fk_playlist_media"/>
+      	</list>
+        <property name="name" column="name" type="string" />
+        <property name="type" column="type" type="string" />
+    </class>
+</hibernate-mapping>

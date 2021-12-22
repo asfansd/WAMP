@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.hibernate.userguide.mapping.converter.hbm">
+    <class name="com.me.wamp.pojo.Media" table="media">
+        <id name="mediaid" column="mediaid" type="integer">
+            <generator class="native" />
+        </id>
+        <property name="type" column="type" type="string" />
+        <property name="name" column="name" type="string" />
+        <property name="url" column="url" type="string" />
+		<one-to-one name="artist" foreign-key="fk_artist" class="com.me.wamp.pojo.Artist" />
+	</class>
+</hibernate-mapping>

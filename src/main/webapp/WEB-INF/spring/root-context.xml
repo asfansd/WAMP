@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean name="userdao" class="com.me.wamp.dao.UserDAO" scope="request" />
+    <bean name="artistdao" class="com.me.wamp.dao.ArtistDAO" scope="request" />
+    <bean name="mediadao" class="com.me.wamp.dao.MediaDAO" scope="request" />
+    <bean name="playlistdao" class="com.me.wamp.dao.PlaylistDAO" scope="request" />
+    <bean name="filedao" class="com.me.wamp.dao.FileDAO" scope="request" />
+    
+    <bean id="adminValidator" class="com.me.wamp.validation.AdminValidator" />
+    <bean id="mediaValidator" class="com.me.wamp.validation.MediaValidator" />
+    <bean id="userValidator" class="com.me.wamp.validation.UserValidator" />
+    
+    <bean id="media" class="com.me.wamp.pojo.Media" scope="request" />
+    <bean id="artist" class="com.me.wamp.pojo.Artist" scope="request" />
+    <bean id="playlist" class="com.me.wamp.pojo.Playlist" scope="request" />
+    <bean id="user" class="com.me.wamp.pojo.User" scope="request" />
+    <bean id="file" class="com.me.wamp.pojo.File" scope="request" />
+    
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+</beans>

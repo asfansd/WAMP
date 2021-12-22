@@ -1,0 +1,4 @@
+com.me.wamp.controller.AdminController=org.springframework.stereotype.Component
+com.me.wamp.controller.HomeController=org.springframework.stereotype.Component
+com.me.wamp.controller.MediaController=org.springframework.stereotype.Component
+com.me.wamp.controller.UserController=org.springframework.stereotype.Component
